@@ -1,4 +1,4 @@
-﻿package com.damai.toolkit;
+package com.damai.toolkit;
 
 import cn.hutool.core.date.SystemClock;
 import cn.hutool.core.lang.Assert;

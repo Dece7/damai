@@ -1,4 +1,4 @@
-﻿package com.damai.service.lua;
+package com.damai.service.lua;
 
 import com.damai.redis.RedisCache;
 import jakarta.annotation.PostConstruct;

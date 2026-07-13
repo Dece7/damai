@@ -1,4 +1,4 @@
-﻿package com.damai.constant;
+package com.damai.constant;
 
 /**
  * @description: 常量

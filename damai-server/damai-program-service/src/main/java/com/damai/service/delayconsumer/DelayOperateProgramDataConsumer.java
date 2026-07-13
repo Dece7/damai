@@ -1,4 +1,4 @@
-﻿package com.damai.service.delayconsumer;
+package com.damai.service.delayconsumer;
 
 import com.alibaba.fastjson.JSON;
 import com.damai.core.ConsumerTask;

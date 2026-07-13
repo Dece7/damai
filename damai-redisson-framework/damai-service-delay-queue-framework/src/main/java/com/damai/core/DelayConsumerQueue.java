@@ -1,4 +1,4 @@
-﻿package com.damai.core;
+package com.damai.core;
 
 import com.damai.context.DelayQueuePart;
 import lombok.extern.slf4j.Slf4j;

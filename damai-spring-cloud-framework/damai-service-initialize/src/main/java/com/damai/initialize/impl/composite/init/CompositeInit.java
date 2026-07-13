@@ -1,4 +1,4 @@
-﻿package com.damai.initialize.impl.composite.init;
+package com.damai.initialize.impl.composite.init;
 
 import com.damai.initialize.base.AbstractApplicationStartEventListenerHandler;
 import com.damai.initialize.impl.composite.CompositeContainer;

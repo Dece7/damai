@@ -1,4 +1,4 @@
-﻿package com.damai.namefactory;
+package com.damai.namefactory;
 
 
 /**

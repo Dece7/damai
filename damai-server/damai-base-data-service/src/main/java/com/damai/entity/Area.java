@@ -1,4 +1,4 @@
-﻿package com.damai.entity;
+package com.damai.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

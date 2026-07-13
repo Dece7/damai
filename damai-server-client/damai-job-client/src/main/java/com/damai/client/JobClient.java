@@ -1,4 +1,4 @@
-﻿package com.damai.client;
+package com.damai.client;
 
 import com.damai.common.ApiResponse;
 import com.damai.dto.JobCallBackDto;

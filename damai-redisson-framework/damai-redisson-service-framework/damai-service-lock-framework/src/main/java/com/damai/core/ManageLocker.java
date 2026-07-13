@@ -1,4 +1,4 @@
-﻿package com.damai.core;
+package com.damai.core;
 
 import com.damai.servicelock.LockType;
 import com.damai.servicelock.ServiceLocker;

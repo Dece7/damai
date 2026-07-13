@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.service.impl;
+package com.damai.captcha.service.impl;
 
 import com.damai.captcha.model.common.Const;
 import com.damai.captcha.model.common.RepCodeEnum;

@@ -1,4 +1,4 @@
-﻿package com.damai.service.constant;
+package com.damai.service.constant;
 
 import java.util.concurrent.TimeUnit;
 

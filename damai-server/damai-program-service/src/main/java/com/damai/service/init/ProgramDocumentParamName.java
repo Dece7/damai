@@ -1,4 +1,4 @@
-﻿package com.damai.service.init;
+package com.damai.service.init;
 /**
  * @description: 节目 mapping
  **/

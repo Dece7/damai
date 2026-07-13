@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="app-header">
     <div class="header">
       <router-link to="/index" class="link">

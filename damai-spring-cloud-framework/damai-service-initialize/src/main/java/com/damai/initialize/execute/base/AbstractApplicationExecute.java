@@ -1,4 +1,4 @@
-﻿package com.damai.initialize.execute.base;
+package com.damai.initialize.execute.base;
 
 import com.damai.initialize.base.InitializeHandler;
 import lombok.AllArgsConstructor;

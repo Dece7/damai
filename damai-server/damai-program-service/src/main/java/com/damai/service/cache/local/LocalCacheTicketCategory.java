@@ -1,4 +1,4 @@
-﻿package com.damai.service.cache.local;
+package com.damai.service.cache.local;
 
 import com.damai.core.RedisKeyManage;
 import com.damai.redis.RedisCache;

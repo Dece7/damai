@@ -1,4 +1,4 @@
-﻿package com.damai.conf.sentinel;
+package com.damai.conf.sentinel;
 
 import com.alibaba.csp.sentinel.adapter.gateway.sc.SentinelGatewayFilter;
 import com.alibaba.csp.sentinel.adapter.gateway.sc.exception.SentinelGatewayBlockExceptionHandler;

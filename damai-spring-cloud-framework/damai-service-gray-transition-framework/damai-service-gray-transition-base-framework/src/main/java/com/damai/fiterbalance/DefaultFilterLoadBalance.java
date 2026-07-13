@@ -1,4 +1,4 @@
-﻿package com.damai.fiterbalance;
+package com.damai.fiterbalance;
 
 
 import com.damai.balance.FilterLoadBalance;

@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.service.impl;
+package com.damai.captcha.service.impl;
 
 import com.damai.captcha.service.CaptchaCacheService;
 import com.damai.captcha.util.CacheUtil;

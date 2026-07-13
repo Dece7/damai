@@ -1,4 +1,4 @@
-﻿package com.damai.mq.callback;
+package com.damai.mq.callback;
 
 /**
  * @description: 用于执行失败的情况

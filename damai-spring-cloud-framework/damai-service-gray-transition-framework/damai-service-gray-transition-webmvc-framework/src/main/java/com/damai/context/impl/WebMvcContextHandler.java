@@ -1,4 +1,4 @@
-﻿package com.damai.context.impl;
+package com.damai.context.impl;
 
 import com.damai.context.ContextHandler;
 import org.springframework.web.context.request.RequestAttributes;

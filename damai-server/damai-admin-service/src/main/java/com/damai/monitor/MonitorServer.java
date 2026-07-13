@@ -1,4 +1,4 @@
-﻿package com.damai.monitor;
+package com.damai.monitor;
 
 import de.codecentric.boot.admin.server.domain.entities.Instance;
 import de.codecentric.boot.admin.server.domain.entities.InstanceRepository;

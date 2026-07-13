@@ -1,4 +1,4 @@
-﻿package com.damai.dto;
+package com.damai.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

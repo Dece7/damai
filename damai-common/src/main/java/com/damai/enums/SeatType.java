@@ -1,4 +1,4 @@
-﻿package com.damai.enums;
+package com.damai.enums;
 
 /**
  * @description: 座位类型

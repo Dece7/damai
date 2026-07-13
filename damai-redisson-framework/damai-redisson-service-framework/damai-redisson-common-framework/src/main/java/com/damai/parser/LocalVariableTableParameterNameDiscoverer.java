@@ -1,4 +1,4 @@
-﻿package com.damai.parser;
+package com.damai.parser;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

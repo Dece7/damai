@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.util;
+package com.damai.captcha.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

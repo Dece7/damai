@@ -1,4 +1,4 @@
-﻿package com.damai.service;
+package com.damai.service;
 
 import com.damai.captcha.model.common.ResponseModel;
 import com.damai.captcha.model.vo.CaptchaVO;

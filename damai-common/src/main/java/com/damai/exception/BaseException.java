@@ -1,4 +1,4 @@
-﻿package com.damai.exception;
+package com.damai.exception;
 
 /**
  * @description: 基础异常

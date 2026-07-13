@@ -1,4 +1,4 @@
-﻿package com.damai.service;
+package com.damai.service;
 
 import com.damai.client.BaseDataClient;
 import com.damai.common.ApiResponse;

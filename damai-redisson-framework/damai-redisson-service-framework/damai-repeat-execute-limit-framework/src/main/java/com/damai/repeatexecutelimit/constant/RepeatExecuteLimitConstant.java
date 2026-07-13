@@ -1,4 +1,4 @@
-﻿package com.damai.repeatexecutelimit.constant;
+package com.damai.repeatexecutelimit.constant;
 
 /**
  * @description: 防重复幂等 标记

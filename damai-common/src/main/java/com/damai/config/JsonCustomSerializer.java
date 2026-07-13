@@ -1,4 +1,4 @@
-﻿package com.damai.config;
+package com.damai.config;
 
 import cn.hutool.core.date.DateTime;
 import com.fasterxml.jackson.core.JsonGenerator;

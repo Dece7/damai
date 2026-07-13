@@ -1,4 +1,4 @@
-﻿package com.damai.environment;
+package com.damai.environment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.env.EnvironmentPostProcessor;

@@ -1,4 +1,4 @@
-﻿package com.damai.balance.config;
+package com.damai.balance.config;
 
 import com.damai.context.ContextHandler;
 import com.damai.enhance.config.EnhanceLoadBalancerClientConfiguration;

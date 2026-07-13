@@ -1,4 +1,4 @@
-﻿package com.damai.vo;
+package com.damai.vo;
 
 import lombok.Data;
 

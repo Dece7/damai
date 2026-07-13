@@ -1,4 +1,4 @@
-﻿package com.damai.enums;
+package com.damai.enums;
 
 /**
  * @description: 订单状态

@@ -1,4 +1,4 @@
-﻿package com.damai.servicelock.info;
+package com.damai.servicelock.info;
 
 /**
  * @description: 分布式锁 处理失败抽象

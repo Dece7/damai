@@ -1,4 +1,4 @@
-﻿package com.damai.config;
+package com.damai.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

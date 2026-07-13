@@ -1,4 +1,4 @@
-﻿package com.damai.core;
+package com.damai.core;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,4 +1,4 @@
-﻿package com.damai.service.delaysend;
+package com.damai.service.delaysend;
 
 import com.damai.context.DelayQueueContext;
 import lombok.extern.slf4j.Slf4j;

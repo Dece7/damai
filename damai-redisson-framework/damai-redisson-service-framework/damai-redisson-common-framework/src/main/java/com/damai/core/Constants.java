@@ -1,4 +1,4 @@
-﻿package com.damai.core;
+package com.damai.core;
 
 /**
  * @description: 常量

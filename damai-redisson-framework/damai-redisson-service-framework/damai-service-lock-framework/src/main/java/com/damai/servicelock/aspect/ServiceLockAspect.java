@@ -1,4 +1,4 @@
-﻿package com.damai.servicelock.aspect;
+package com.damai.servicelock.aspect;
 
 import com.damai.constant.LockInfoType;
 import com.damai.util.StringUtil;

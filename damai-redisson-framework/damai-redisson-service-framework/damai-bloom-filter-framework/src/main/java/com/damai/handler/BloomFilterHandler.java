@@ -1,4 +1,4 @@
-﻿package com.damai.handler;
+package com.damai.handler;
 
 
 import com.damai.config.BloomFilterProperties;

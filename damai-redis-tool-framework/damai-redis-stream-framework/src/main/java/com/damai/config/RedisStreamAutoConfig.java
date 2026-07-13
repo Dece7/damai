@@ -1,4 +1,4 @@
-﻿package com.damai.config;
+package com.damai.config;
 
 import com.damai.MessageConsumer;
 import com.damai.RedisStreamConfigProperties;

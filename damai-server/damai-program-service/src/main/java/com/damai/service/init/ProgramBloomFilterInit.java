@@ -1,4 +1,4 @@
-﻿package com.damai.service.init;
+package com.damai.service.init;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.damai.handler.BloomFilterHandler;

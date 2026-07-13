@@ -1,4 +1,4 @@
-﻿package com.damai.config;
+package com.damai.config;
 
 import com.damai.util.DateUtils;
 import com.fasterxml.jackson.core.JsonParser;

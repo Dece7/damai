@@ -1,4 +1,4 @@
-﻿package com.damai.common;
+package com.damai.common;
 
 import com.damai.enums.BaseCode;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,4 +1,4 @@
-﻿import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
+import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import {getToken} from '@/utils/auth'
 
 export const constantRoutes = [

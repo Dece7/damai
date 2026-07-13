@@ -1,4 +1,4 @@
-﻿package com.damai.lockinfo.factory;
+package com.damai.lockinfo.factory;
 
 
 import com.damai.lockinfo.LockInfoHandle;

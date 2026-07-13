@@ -1,4 +1,4 @@
-﻿package com.damai.util;
+package com.damai.util;
 
 
 import com.damai.constant.LockInfoType;

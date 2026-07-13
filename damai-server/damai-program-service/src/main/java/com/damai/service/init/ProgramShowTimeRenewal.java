@@ -1,4 +1,4 @@
-﻿package com.damai.service.init;
+package com.damai.service.init;
 
 import com.damai.core.SpringUtil;
 import com.damai.initialize.base.AbstractApplicationPostConstructHandler;

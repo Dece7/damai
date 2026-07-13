@@ -1,4 +1,4 @@
-﻿package com.damai.initialize.base;
+package com.damai.initialize.base;
 
 import jakarta.annotation.PostConstruct;
 

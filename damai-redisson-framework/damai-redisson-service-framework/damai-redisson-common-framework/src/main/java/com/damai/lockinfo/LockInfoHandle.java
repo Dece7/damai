@@ -1,4 +1,4 @@
-﻿package com.damai.lockinfo;
+package com.damai.lockinfo;
 
 import org.aspectj.lang.JoinPoint;
 

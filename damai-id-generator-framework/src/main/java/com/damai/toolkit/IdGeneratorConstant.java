@@ -1,4 +1,4 @@
-﻿package com.damai.toolkit;
+package com.damai.toolkit;
 
 /**
  * @description: 雪花算法相关常量

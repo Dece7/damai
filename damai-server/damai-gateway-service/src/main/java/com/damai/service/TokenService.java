@@ -1,4 +1,4 @@
-﻿package com.damai.service;
+package com.damai.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.damai.core.RedisKeyManage;

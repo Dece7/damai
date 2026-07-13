@@ -1,4 +1,4 @@
-﻿package com.damai.service;
+package com.damai.service;
 
 import cn.hutool.core.date.DateUtil;
 import com.baidu.fsg.uid.UidGenerator;

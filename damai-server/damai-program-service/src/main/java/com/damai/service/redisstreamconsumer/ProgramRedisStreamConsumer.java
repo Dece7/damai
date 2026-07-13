@@ -1,4 +1,4 @@
-﻿package com.damai.service.redisstreamconsumer;
+package com.damai.service.redisstreamconsumer;
 
 import com.damai.MessageConsumer;
 import com.damai.service.ProgramService;

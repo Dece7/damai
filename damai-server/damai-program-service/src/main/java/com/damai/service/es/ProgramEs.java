@@ -1,4 +1,4 @@
-﻿package com.damai.service.es;
+package com.damai.service.es;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.damai.core.SpringUtil;

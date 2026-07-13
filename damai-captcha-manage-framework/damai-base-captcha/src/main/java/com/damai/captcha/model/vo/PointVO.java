@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.model.vo;
+package com.damai.captcha.model.vo;
 
 import lombok.Data;
 

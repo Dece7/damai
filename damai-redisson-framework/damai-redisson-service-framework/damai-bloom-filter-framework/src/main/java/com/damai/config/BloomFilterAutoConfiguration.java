@@ -1,4 +1,4 @@
-﻿package com.damai.config;
+package com.damai.config;
 
 import com.damai.handler.BloomFilterHandler;
 import org.redisson.api.RedissonClient;

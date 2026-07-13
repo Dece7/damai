@@ -1,4 +1,4 @@
-﻿package com.damai.pay;
+package com.damai.pay;
 
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;

@@ -1,4 +1,4 @@
-﻿package com.damai.feign;
+package com.damai.feign;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

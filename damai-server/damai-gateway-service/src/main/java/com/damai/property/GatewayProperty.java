@@ -1,4 +1,4 @@
-﻿package com.damai.property;
+package com.damai.property;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

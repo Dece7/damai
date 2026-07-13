@@ -1,4 +1,4 @@
-﻿package com.damai.config;
+package com.damai.config;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import org.springframework.context.annotation.Bean;

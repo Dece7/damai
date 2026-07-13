@@ -1,4 +1,4 @@
-﻿package com.damai.servicelock.annotion;
+package com.damai.servicelock.annotion;
 
 import com.damai.servicelock.LockType;
 import com.damai.servicelock.info.LockTimeOutStrategy;

@@ -1,4 +1,4 @@
-﻿package com.damai.servicelock.info;
+package com.damai.servicelock.info;
 
 
 /**

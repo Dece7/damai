@@ -1,4 +1,4 @@
-﻿package com.damai.redis;
+package com.damai.redis;
 
 import com.alibaba.fastjson.util.ParameterizedTypeImpl;
 import com.damai.util.StringUtil;

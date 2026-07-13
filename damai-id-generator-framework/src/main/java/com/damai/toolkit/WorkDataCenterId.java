@@ -1,4 +1,4 @@
-﻿package com.damai.toolkit;
+package com.damai.toolkit;
 
 import lombok.Data;
 

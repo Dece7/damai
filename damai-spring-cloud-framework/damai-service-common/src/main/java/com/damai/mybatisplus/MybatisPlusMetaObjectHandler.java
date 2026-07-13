@@ -1,4 +1,4 @@
-﻿package com.damai.mybatisplus;
+package com.damai.mybatisplus;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.damai.util.DateUtils;

@@ -1,4 +1,4 @@
-﻿package com.damai;
+package com.damai;
 
 import com.alibaba.fastjson.JSON;
 import lombok.AllArgsConstructor;

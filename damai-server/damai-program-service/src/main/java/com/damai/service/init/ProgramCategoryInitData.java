@@ -1,4 +1,4 @@
-﻿package com.damai.service.init;
+package com.damai.service.init;
 
 import com.damai.BusinessThreadPool;
 import com.damai.initialize.base.AbstractApplicationPostConstructHandler;

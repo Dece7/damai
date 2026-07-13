@@ -1,4 +1,4 @@
-﻿package com.damai.service.kafka;
+package com.damai.service.kafka;
 
 import com.alibaba.fastjson.JSON;
 import com.damai.dto.OrderCreateDto;

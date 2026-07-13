@@ -1,4 +1,4 @@
-﻿package com.damai.request;
+package com.damai.request;
 
 import com.damai.util.StringUtil;
 

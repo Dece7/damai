@@ -1,4 +1,4 @@
-﻿package com.damai.context;
+package com.damai.context;
 
 import com.damai.core.DelayProduceQueue;
 import com.damai.core.IsolationRegionSelector;

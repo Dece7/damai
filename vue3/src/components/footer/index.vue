@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="footer">
     <div class="footer-sec">
       <div class="footer-copyright">
@@ -29,4 +29,4 @@
     }
   }
 }
-</script>
+</style>

@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.util;
+package com.damai.captcha.util;
 
 
 import java.io.ByteArrayOutputStream;

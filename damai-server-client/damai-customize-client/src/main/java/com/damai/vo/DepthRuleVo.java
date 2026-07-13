@@ -1,4 +1,4 @@
-﻿package com.damai.vo;
+package com.damai.vo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;

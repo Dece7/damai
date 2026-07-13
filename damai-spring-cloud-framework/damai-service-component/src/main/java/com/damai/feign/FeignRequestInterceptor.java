@@ -1,4 +1,4 @@
-﻿package com.damai.feign;
+package com.damai.feign;
 
 import com.damai.util.StringUtil;
 import feign.RequestInterceptor;

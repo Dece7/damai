@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.model.common;
+package com.damai.captcha.model.common;
 
 /**
  * @description: 底图类型枚举

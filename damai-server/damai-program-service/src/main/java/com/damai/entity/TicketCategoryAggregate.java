@@ -1,4 +1,4 @@
-﻿package com.damai.entity;
+package com.damai.entity;
 
 import lombok.Data;
 

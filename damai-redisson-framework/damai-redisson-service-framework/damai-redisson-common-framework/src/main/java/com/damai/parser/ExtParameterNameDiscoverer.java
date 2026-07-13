@@ -1,4 +1,4 @@
-﻿package com.damai.parser;
+package com.damai.parser;
 
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.NativeDetector;

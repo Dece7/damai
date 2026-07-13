@@ -1,4 +1,4 @@
-﻿package com.damai.service.tool;
+package com.damai.service.tool;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.damai.vo.SeatVo;

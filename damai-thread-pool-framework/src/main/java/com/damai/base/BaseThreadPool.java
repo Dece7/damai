@@ -1,4 +1,4 @@
-﻿package com.damai.base;
+package com.damai.base;
 
 import com.damai.threadlocal.BaseParameterHolder;
 import org.slf4j.MDC;

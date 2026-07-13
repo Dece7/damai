@@ -1,4 +1,4 @@
-﻿package com.damai;
+package com.damai;
 
 import com.damai.config.DaMaiCommonAutoConfig;
 import de.codecentric.boot.admin.server.config.EnableAdminServer;

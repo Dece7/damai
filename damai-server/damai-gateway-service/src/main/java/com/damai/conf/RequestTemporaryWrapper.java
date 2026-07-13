@@ -1,4 +1,4 @@
-﻿package com.damai.conf;
+package com.damai.conf;
 
 import com.damai.common.ApiResponse;
 import lombok.Data;

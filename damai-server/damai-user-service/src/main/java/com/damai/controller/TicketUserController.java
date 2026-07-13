@@ -1,4 +1,4 @@
-﻿package com.damai.controller;
+package com.damai.controller;
 
 import com.damai.common.ApiResponse;
 import com.damai.dto.TicketUserDto;

@@ -1,4 +1,4 @@
-﻿package com.damai.threadlocal;
+package com.damai.threadlocal;
 
 import java.util.HashMap;
 import java.util.Map;

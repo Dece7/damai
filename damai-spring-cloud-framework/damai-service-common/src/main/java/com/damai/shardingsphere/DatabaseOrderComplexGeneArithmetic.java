@@ -1,4 +1,4 @@
-﻿package com.damai.shardingsphere;
+package com.damai.shardingsphere;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.damai.enums.BaseCode;

@@ -1,4 +1,4 @@
-﻿package com.damai;
+package com.damai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

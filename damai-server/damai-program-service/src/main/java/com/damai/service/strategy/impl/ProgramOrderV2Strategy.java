@@ -1,4 +1,4 @@
-﻿package com.damai.service.strategy.impl;
+package com.damai.service.strategy.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.StrUtil;

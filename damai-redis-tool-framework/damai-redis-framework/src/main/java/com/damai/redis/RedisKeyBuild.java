@@ -1,4 +1,4 @@
-﻿package com.damai.redis;
+package com.damai.redis;
 
 
 import com.damai.core.RedisKeyManage;

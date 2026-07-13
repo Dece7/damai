@@ -1,4 +1,4 @@
-﻿package com.damai.service;
+package com.damai.service;
 
 import com.damai.captcha.service.CaptchaCacheService;
 import org.springframework.data.redis.core.StringRedisTemplate;

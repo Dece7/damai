@@ -1,4 +1,4 @@
-﻿package com.damai.properties;
+package com.damai.properties;
 
 import com.damai.captcha.model.common.CaptchaTypeEnum;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -1,4 +1,4 @@
-﻿package com.damai.data;
+package com.damai.data;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

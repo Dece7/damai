@@ -1,4 +1,4 @@
-﻿package com.damai.balance;
+package com.damai.balance;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cloud.client.ServiceInstance;

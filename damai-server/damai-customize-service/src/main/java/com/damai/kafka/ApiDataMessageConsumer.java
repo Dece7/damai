@@ -1,4 +1,4 @@
-﻿package com.damai.kafka;
+package com.damai.kafka;
 
 import com.alibaba.fastjson.JSON;
 import com.damai.entity.ApiData;

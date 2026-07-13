@@ -1,4 +1,4 @@
-﻿package com.damai.service.composite.register.impl;
+package com.damai.service.composite.register.impl;
 
 import com.damai.captcha.model.common.ResponseModel;
 import com.damai.captcha.model.vo.CaptchaVO;

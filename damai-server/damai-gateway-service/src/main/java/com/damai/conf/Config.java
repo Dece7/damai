@@ -1,4 +1,4 @@
-﻿package com.damai.conf;
+package com.damai.conf;
 
 import com.damai.exception.GatewayDefaultExceptionHandler;
 import org.springframework.beans.factory.ObjectProvider;

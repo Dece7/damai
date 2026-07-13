@@ -1,4 +1,4 @@
-﻿package com.damai.service.tool;
+package com.damai.service.tool;
 
 
 import org.elasticsearch.search.sort.SortOrder;

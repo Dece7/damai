@@ -1,4 +1,4 @@
-﻿package com.damai.pay;
+package com.damai.pay;
 
 import com.damai.enums.BaseCode;
 import com.damai.exception.DaMaiFrameException;

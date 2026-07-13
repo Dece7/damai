@@ -1,4 +1,4 @@
-﻿package com.damai.event;
+package com.damai.event;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.damai.context.DelayQueueBasePart;

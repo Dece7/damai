@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.service.impl;
+package com.damai.captcha.service.impl;
 
 /**
  * @description: 验证码常量

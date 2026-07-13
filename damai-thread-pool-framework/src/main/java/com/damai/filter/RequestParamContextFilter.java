@@ -1,4 +1,4 @@
-﻿package com.damai.filter;
+package com.damai.filter;
 
 
 import com.damai.util.StringUtil;

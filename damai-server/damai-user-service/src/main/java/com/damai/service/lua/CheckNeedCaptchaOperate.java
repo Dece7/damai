@@ -1,4 +1,4 @@
-﻿package com.damai.service.lua;
+package com.damai.service.lua;
 
 import com.damai.initialize.base.AbstractApplicationPostConstructHandler;
 import com.damai.redis.RedisCache;

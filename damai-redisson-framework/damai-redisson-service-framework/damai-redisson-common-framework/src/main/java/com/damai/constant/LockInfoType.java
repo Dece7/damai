@@ -1,4 +1,4 @@
-﻿package com.damai.constant;
+package com.damai.constant;
 
 /**
  * @description: 业务类型

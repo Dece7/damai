@@ -1,4 +1,4 @@
-﻿package com.damai.pro.limit;
+package com.damai.pro.limit;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

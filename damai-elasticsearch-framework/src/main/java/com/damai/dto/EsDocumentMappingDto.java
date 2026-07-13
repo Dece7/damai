@@ -1,4 +1,4 @@
-﻿package com.damai.dto;
+package com.damai.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

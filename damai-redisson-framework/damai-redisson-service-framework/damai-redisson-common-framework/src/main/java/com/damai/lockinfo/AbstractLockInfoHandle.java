@@ -1,4 +1,4 @@
-﻿package com.damai.lockinfo;
+package com.damai.lockinfo;
 
 
 import com.damai.core.SpringUtil;

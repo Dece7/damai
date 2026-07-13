@@ -1,4 +1,4 @@
-﻿package com.damai.util;
+package com.damai.util;
 
 /**
  * @description: 分布式锁 方法类型执行 无返回值的业务

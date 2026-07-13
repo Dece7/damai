@@ -1,4 +1,4 @@
-﻿package com.damai.util;
+package com.damai.util;
 
 import org.apache.commons.lang.StringUtils;
 

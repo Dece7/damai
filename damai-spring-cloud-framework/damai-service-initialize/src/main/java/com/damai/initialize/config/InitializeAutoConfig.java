@@ -1,4 +1,4 @@
-﻿package com.damai.initialize.config;
+package com.damai.initialize.config;
 
 import com.damai.initialize.execute.ApplicationCommandLineRunnerExecute;
 import com.damai.initialize.execute.ApplicationInitializingBeanExecute;

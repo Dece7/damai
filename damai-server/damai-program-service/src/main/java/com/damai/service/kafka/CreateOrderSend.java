@@ -1,4 +1,4 @@
-﻿package com.damai.service.kafka;
+package com.damai.service.kafka;
 
 import com.damai.core.SpringUtil;
 import com.damai.mq.callback.FailureCallback;

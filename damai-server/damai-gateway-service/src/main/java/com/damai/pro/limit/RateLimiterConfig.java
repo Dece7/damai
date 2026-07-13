@@ -1,4 +1,4 @@
-﻿package com.damai.pro.limit;
+package com.damai.pro.limit;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

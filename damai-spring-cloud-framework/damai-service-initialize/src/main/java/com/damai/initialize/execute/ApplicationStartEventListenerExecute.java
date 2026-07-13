@@ -1,4 +1,4 @@
-﻿package com.damai.initialize.execute;
+package com.damai.initialize.execute;
 
 import com.damai.initialize.execute.base.AbstractApplicationExecute;
 import org.springframework.boot.context.event.ApplicationStartedEvent;

@@ -1,4 +1,4 @@
-﻿package com.damai.rejectedexecutionhandler;
+package com.damai.rejectedexecutionhandler;
 
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.RejectedExecutionHandler;

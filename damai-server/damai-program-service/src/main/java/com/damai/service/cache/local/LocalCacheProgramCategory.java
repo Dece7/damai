@@ -1,4 +1,4 @@
-﻿package com.damai.service.cache.local;
+package com.damai.service.cache.local;
 
 import com.damai.entity.ProgramCategory;
 import com.github.benmanes.caffeine.cache.Cache;

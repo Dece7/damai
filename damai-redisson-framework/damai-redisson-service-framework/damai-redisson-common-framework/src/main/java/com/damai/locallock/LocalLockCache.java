@@ -1,4 +1,4 @@
-﻿package com.damai.locallock;
+package com.damai.locallock;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;

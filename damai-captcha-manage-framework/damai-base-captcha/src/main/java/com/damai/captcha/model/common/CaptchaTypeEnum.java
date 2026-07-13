@@ -1,4 +1,4 @@
-﻿package com.damai.captcha.model.common;
+package com.damai.captcha.model.common;
 
 /**
  * @description: 动作类型枚举

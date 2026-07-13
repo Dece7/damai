@@ -1,4 +1,4 @@
-﻿package com.damai.initialize.constant;
+package com.damai.initialize.constant;
 
 /**
  * @description: 初始化执行 不同策略类型

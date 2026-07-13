@@ -1,4 +1,4 @@
-﻿package com.damai.core;
+package com.damai.core;
 
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

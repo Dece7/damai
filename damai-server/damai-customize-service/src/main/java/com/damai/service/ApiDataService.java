@@ -1,4 +1,4 @@
-﻿package com.damai.service;
+package com.damai.service;
 
 import cn.hutool.core.collection.CollUtil;
 import com.alibaba.fastjson.JSON;

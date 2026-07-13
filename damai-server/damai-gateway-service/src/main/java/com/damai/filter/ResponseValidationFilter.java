@@ -1,4 +1,4 @@
-﻿package com.damai.filter;
+package com.damai.filter;
 
 import com.alibaba.fastjson.JSON;
 import com.damai.common.ApiResponse;

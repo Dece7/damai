@@ -1,4 +1,4 @@
-﻿package com.damai.servicelock;
+package com.damai.servicelock;
 
 /**
  * @description: 分布式锁 锁类型
