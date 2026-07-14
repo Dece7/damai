@@ -125,6 +125,12 @@ const localName = ref('')
 const localId = ref('')
 const hotCity = ref([])
 const otherCity = ref([])
+// 热门城市白名单
+const hotCityList = ['北京','上海','广州','深圳','成都','杭州','武汉','南京','重庆','天津',
+  '苏州','西安','长沙','沈阳','青岛','郑州','大连','东莞','宁波','厦门',
+  '福州','无锡','合肥','昆明','哈尔滨','济南','佛山','长春','温州','石家庄',
+  '南宁','常州','泉州','南昌','贵阳','太原','烟台','嘉兴','南通','金华',
+  '珠海','惠州','徐州','海口','乌鲁木齐','绍兴','中山','台州','兰州']
 const visible = ref(false)
 const showAllCities = ref(false)
 const queryParams = ref({
@@ -225,7 +231,7 @@ function getHot() {
 //其他城市
 function getOther() {
   getOtherCity().then(response => {
-    otherCity.value = response.data ? response.data.slice(0, 15) : []
+    otherCity.value = (response.data || []).filter(item => hotCityList.includes(item.name)).slice(0, 30)
   })
 }
 
