@@ -9,7 +9,7 @@
           <Location/>
         </el-icon>
 
-        <el-popover placement="bottom" @click="visible = !visible" style="height: 10px">
+        <el-popover placement="bottom-start" :width="360" :show-arrow="false" :offset="8">
           <template #reference>
             <span style="margin-right: 16px" class="city-location">{{ localName }}<el-icon :size="12"> <CaretBottom/></el-icon></span>
           </template>
@@ -440,129 +440,68 @@ function getProgramSearchList() {
 
 
 .city {
-  width: 626px;
-  z-index: 999;
-  position: relative;
-  left: -115px;
-  top: -72px;
-  margin-top: 60px;
-  background: #FFF;
-  border: 1px solid #F4F4F4;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .05);
-  border-radius: 2px;
-  padding: 21px;
-  max-height: 1500px;
-  overflow: hidden;
+  width: 360px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
 
   .now-city {
-    line-height: 25px;
+    margin-bottom: 12px;
 
     .title-city {
-      width: 86px;
-      display: inline-block;
-      margin-right: 15px;
-      vertical-align: top;
-      font-size: 16px;
-      color: #111;
-      letter-spacing: .56px;
-      float: left;
-
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 8px;
+      display: block;
     }
 
     .city-name {
       display: inline-block;
-      margin-right: 15px;
-      vertical-align: top;
-      font-size: 16px;
-      color: #111;
-      letter-spacing: .56px;
-      float: left;
-
+      padding: 4px 12px;
+      font-size: 13px;
+      color: #333;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
     .select-city {
       color: rgba(255, 55, 29, 0.85);
       background-color: #fff4f8;
-      padding: 0 10px;
     }
   }
 
-  .hot-city {
-    line-height: 25px;
-    margin-top: 40px;
-
-    .title-city {
-      width: 86px;
-      display: inline-block;
-      margin-right: 15px;
-      vertical-align: top;
-      font-size: 16px;
-      color: #111;
-      letter-spacing: .56px;
-      float: left;
-    }
-
-    .list-city {
-      list-style: none;
-      width: 525px;
-      //display: inline-block;
-      line-height: 29px;
-      margin-top: -3px;
-
-
-      .city-name {
-
-        display: inline-block;
-        margin-right: 15px;
-        vertical-align: top;
-        font-size: 16px;
-        color: #111;
-        letter-spacing: .56px;
-
-        &:hover {
-          color: rgba(255, 55, 29, 0.85);
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
+  .hot-city,
   .others-city {
-    line-height: 25px;
-    padding-top: 15px;
-    border-top: 1px solid #EEE;
-    margin-top: 15px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
 
     .title-city {
-      display: inline-block;
-      margin-right: 15px;
-      vertical-align: top;
-      font-size: 16px;
-      color: #111;
-      letter-spacing: .56px;
-      float: left;
-      width: 86px;
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 8px;
+      display: block;
     }
 
     .list-city {
       list-style: none;
-      width: 525px;
-      //display: inline-block;
-      line-height: 29px;
-      margin-top: -3px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
 
       .city-name {
-        display: inline-block;
-        margin-right: 15px;
-        vertical-align: top;
-        font-size: 16px;
-        color: #111;
-        letter-spacing: .56px;
-        float: left;
+        padding: 4px 10px;
+        font-size: 13px;
+        color: #333;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.2s ease;
 
         &:hover {
           color: rgba(255, 55, 29, 0.85);
-          cursor: pointer;
+          background: rgba(255, 55, 29, 0.05);
         }
       }
     }
