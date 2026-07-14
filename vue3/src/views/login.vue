@@ -86,6 +86,8 @@ const activeName = ref('first')
 const isTips = ref(false)
 const tipsContent = ref('')
 const userName = ref('')
+const register = ref(true)
+const experienceAccountFlag = ref(import.meta.env.VITE_EXPERIENCE_ACCOUNT_FLAG)
 
 const loginForm = ref({
   email: '',
