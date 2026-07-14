@@ -29,11 +29,11 @@
                 show-password
             />
           </el-form-item>
-          <el-form-item :style="chkStyle">
+          <el-form-item label-width="0" :style="chkStyle">
             <el-checkbox v-model="checkBox" @change="boxChange"/>
             <span class="chx">{{ agreeOpt }}</span>
           </el-form-item>
-          <el-form-item>
+          <el-form-item label-width="0" class="btn-wrap">
             <el-button
                 type="primary"
                 class="btn"
@@ -294,6 +294,12 @@ function handleValueFromChild(value) {
 
 :deep(.el-form-item__content) {
   flex-wrap: nowrap;
+}
+
+.btn-wrap {
+  :deep(.el-form-item__content) {
+    justify-content: center;
+  }
 }
 
 :deep(.el-form-item__label) {
