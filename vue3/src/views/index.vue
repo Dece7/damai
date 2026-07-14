@@ -99,6 +99,7 @@ function getgetcategoryList() {
 
 function handleUpdate(value) {
   queryParams.value.areaId = value
+  getMainCategoryList()
 }
 
 function getMainCategoryList() {
