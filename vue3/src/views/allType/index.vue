@@ -248,8 +248,6 @@
           </li>
         </ul>
       </div>
-    </div>
-    <Footer></Footer>
   </div>
 </template>
 
