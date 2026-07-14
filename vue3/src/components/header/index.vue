@@ -225,6 +225,7 @@ function getCityInfoList(params) {
     let {name, parentId, id, type} = response.data
     localName.value = name
     localId.value = id
+    emits('updateValue', localId.value)
     getCurrent()
     getHot()
     getOther()
