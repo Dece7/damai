@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="app-header">
     <div class="header">
       <router-link to="/index" class="link">
@@ -41,6 +41,7 @@
       <div class="recommendHeader" v-if="isShowHeader">
         <router-link to="/index" class="routeHome" tag="div">首页</router-link>
         <router-link to="/allType/index" class="routeType" tag="div">分类</router-link>
+        <span class="routeType" @click="openAIChat" v-if="isHasToken">AI客服</span>
       </div>
       <div class="searchHeader" v-if="isShowHeader">
         <el-input
@@ -76,9 +77,6 @@
                 </li>
                 <li>
                   <router-link to="/orderManagement/index">订单管理</router-link>
-                </li>
-                <li @click="openAIChat" class="aiChat" v-if="isHasToken">
-                  <span>AI客服</span>
                 </li>
                 <li @click="loginOut" class="logOut" v-if="isHasToken">
                   <span class="loginOut">退出登录</span>
@@ -125,12 +123,7 @@ const localName = ref('')
 const localId = ref('')
 const hotCity = ref([])
 const otherCity = ref([])
-// 有节目的城市
-const hotCityList = ['全国','北京','上海','广州','深圳','成都','杭州','武汉','南京','重庆',
-  '天津','苏州','西安','长沙','沈阳','青岛','郑州','大连','哈尔滨','长春',
-  '济南','厦门','福州','合肥','昆明','东莞','宁波','佛山','温州','石家庄']
 const visible = ref(false)
-const showAllCities = ref(false)
 const queryParams = ref({
   content: '',
   pageNumber: 1,
@@ -163,11 +156,6 @@ function openAIChat() {
   }
 }
 
-
-function selectCity(item) {
-  getCityInfoList(item)
-  showAllCities.value = false
-}
 function loginOut() {
   userStore.logOut().then(() => {
     location.href = '/';
@@ -229,7 +217,7 @@ function getHot() {
 //其他城市
 function getOther() {
   getOtherCity().then(response => {
-    otherCity.value = (response.data || []).filter(item => hotCityList.includes(item.name)).slice(0, 30)
+    otherCity.value = response.data
   })
 }
 
@@ -267,20 +255,19 @@ function getProgramSearchList() {
     width: 1200px;
     margin: 0 auto;
     height: 72px;
+    display: flex;
+    align-items: center;
 
     .link {
+      flex-shrink: 0;
       img {
-        float: left;
-        margin-top: 10px;
         width: 108px;
         height: 48px;
       }
     }
 
     .localHeader {
-      width: 66px;
-      height: 100%;
-      float: left;
+      flex-shrink: 0;
       position: relative;
       margin-left: 54px;
       line-height: 72px;
@@ -295,34 +282,24 @@ function getProgramSearchList() {
         vertical-align: middle;
         margin-left: 5px;
         margin-right: 5px;
-        //white-space: nowrap;
-        //overflow: hidden;
-        //text-overflow: ellipsis;
         border: none;
 
         &:hover {
           background: none;
         }
       }
-
-
     }
 
     .recommendHeader {
-      max-width: 220px;
-      height: 100%;
-      float: left;
-      margin-right: -20px;
+      flex-shrink: 0;
       margin-left: 40px;
       line-height: 72px;
-      overflow: hidden;
+      white-space: nowrap;
 
       .routeHome {
         display: inline-block;
         font-size: 16px;
         margin-right: 18px;
-        overflow: hidden;
-
       }
 
       .routeHome.router-link-active {
@@ -334,8 +311,11 @@ function getProgramSearchList() {
         font-size: 16px;
         color: #000;
         margin-right: 18px;
-        overflow: hidden;
+        cursor: pointer;
 
+        &:hover {
+          color: rgba(255, 55, 29, 0.85);
+        }
       }
 
       .routeType.router-link-active {
@@ -344,12 +324,11 @@ function getProgramSearchList() {
     }
 
     .searchHeader {
-      width: 32%;
+      flex: 1;
       height: 46px;
       margin-top: 12px;
-      margin-left: 286px;
+      margin-left: 40px;
       line-height: 46px;
-      float: left;
       position: relative;
 
       .input-with-search {
@@ -398,10 +377,9 @@ function getProgramSearchList() {
     }
 
     .rightHeader {
-      min-width: 55px;
+      flex-shrink: 0;
       height: 100%;
       position: relative;
-      float: right;
       line-height: 72px;
 
       .box-left {
@@ -620,53 +598,4 @@ function getProgramSearchList() {
 }
 
 
-
-/* 城市选择新样式 */
-.city-panel {
-  padding: 16px;
-}
-
-.city-current {
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #f0f0f0;
-  .label { color: #999; font-size: 13px; }
-  .value { color: #ff371d; font-weight: 500; }
-}
-
-.city-hot .label {
-  color: #999;
-  font-size: 13px;
-  margin-right: 8px;
-}
-
-.hot-tags {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.hot-tag {
-  padding: 6px 16px;
-  background: #f5f5f7;
-  border-radius: 20px;
-  font-size: 13px;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.2s;
-  &:hover { background: #fff4f2; color: #ff371d; }
-  &.active { background: #ff371d; color: #fff; }
-}
-
-.more-btn {
-  padding: 6px 16px;
-  background: transparent;
-  border: 1px dashed #ddd;
-  border-radius: 20px;
-  font-size: 13px;
-  color: #999;
-  cursor: pointer;
-  &:hover { border-color: #ff371d; color: #ff371d; }
-}
 </style>

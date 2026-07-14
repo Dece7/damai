@@ -110,16 +110,16 @@ function getIsVaild() {
 }
 
 .section {
-  width: 1000px;
+  width: 1200px;
   margin: 15px auto 0;
 
   .sidebarMenu {
-    //width: 201px;
+    width: 201px;
     float: left;
   }
 
   .right-section {
-    width: 789px;
+    width: 950px;
     float: right;
 
     .breadcrumb {

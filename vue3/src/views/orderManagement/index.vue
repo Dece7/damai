@@ -129,7 +129,7 @@ onMounted(() => {
   margin: 15px auto 0;
 
   .sidebarMenu {
-    //width: 201px;
+    width: 201px;
     float: left;
   }
 
