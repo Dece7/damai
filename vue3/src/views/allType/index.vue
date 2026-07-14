@@ -14,7 +14,7 @@
                   <span>当前选中城市：</span><span class="active">{{ currentCity }}</span>
                 </template>
                 <div class="city">
-                  <ul style="margin-left: 70px">
+                  <ul>
                     <li v-show="isShow" v-for="(item,index) in cityArr.slice(0,22)" :key="item.id"
                         @click="cityClick(item,index)"
                     >
@@ -548,56 +548,24 @@ function removeTag(str, tag) {
 
     .box-main-left {
 
-
       .box-tLeft {
         width: 928px;
 
         .box-type {
           padding: 0 24px;
           border: 1px solid #e9e9e9;
-          min-height: 300px;
-
-          div.city {
-            display: inline-block;
-            width: calc(100% - 40px);
-          }
-
-          div {
-            ul {
-              margin: 0;
-              padding: 10px;
-
-              li {
-                //width: 42px;
-                list-style: none;
-                display: inline-block;
-                height: 26px;
-                line-height: 26px;
-                padding: 0 8px;
-                margin-right: 20px;
-                color: #333;
-                white-space: nowrap;
-                cursor: pointer;
-              }
-
-              .liDate {
-                width: 320px;
-                padding: 0px !important;
-                height: 26px;
-                line-height: 26px;
-                float: right;
-              }
-
-            }
-
-          }
+          border-radius: 8px;
+          background: #fafafa;
+          margin-bottom: 16px;
 
           .btn {
             display: inline-block;
             width: 40px;
-            height: 100px;
-            line-height: 100px;
+            height: 26px;
+            line-height: 26px;
             cursor: pointer;
+            color: rgba(255, 55, 29, 0.85);
+            font-size: 12px;
           }
         }
 
@@ -628,11 +596,9 @@ function removeTag(str, tag) {
                     width: 100%;
                     height: 100%;
                   }
-
                 }
 
                 .item-txt {
-
                   width: 670px;
                   line-height: 24px;
                   float: left;
@@ -642,15 +608,10 @@ function removeTag(str, tag) {
                     font-size: 16px;
                     font-weight: 400;
 
-                    span {
-                    }
-
                     .link-detial {
                       color: #333;
                       text-decoration: none;
                       outline: 0;
-
-
                     }
                   }
 
@@ -660,9 +621,6 @@ function removeTag(str, tag) {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     color: #999;
-                  }
-
-                  .item-tag {
                   }
 
                   .item-price {
@@ -679,7 +637,6 @@ function removeTag(str, tag) {
                       font-style: normal;
                       font-weight: bold;
                     }
-
                   }
                 }
               }
@@ -692,7 +649,6 @@ function removeTag(str, tag) {
           }
         }
       }
-
     }
 
     .box-main-right {
@@ -795,8 +751,6 @@ function removeTag(str, tag) {
       }
     }
   }
-
-
 }
 
 .active {
@@ -805,46 +759,92 @@ function removeTag(str, tag) {
   display: inline-block;
   height: 26px;
   line-height: 26px;
+  padding: 0 8px;
+  border-radius: 3px;
   white-space: nowrap;
   cursor: pointer;
 }
 
-:deep(.el-icon svg) {
-  display: none;
-}
-
-:deep(.el-collapse-item__header .title) {
-  width: 50px;
-  height: 26px;
-  line-height: 26px;
-  display: inline-block;
-  color: #968788;
-  text-align: center;
-}
-
-
-:deep(.el-collapse-item) {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px dotted #dfdfdf;
-}
-
-:deep(.el-collapse-item:first-child) {
-  display: block;
-
-
-}
-
-:deep(.el-collapse-item__content) {
-  padding-bottom: 0;
-}
-
-:deep(.el-collapse-item__wrap) {
+// 筛选区域样式
+:deep(.el-collapse) {
   border: none;
 }
 
-/* 添加CSS来隐藏日历控件的输入框 */
-:deep(.el-date-editor.el-input, .el-date-editor.el-input__wrapper) {
+:deep(.el-collapse-item) {
+  border-bottom: 1px solid #eee;
+}
+
+:deep(.el-collapse-item__header) {
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  border-bottom: none;
+  font-size: 14px;
+
+  .title {
+    width: 50px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    color: #999;
+    font-weight: 500;
+  }
+}
+
+:deep(.el-collapse-item__wrap) {
+  border-bottom: none;
+  background: transparent;
+}
+
+:deep(.el-collapse-item__content) {
+  padding-bottom: 8px;
+}
+
+// 筛选项列表
+:deep(.el-collapse-item__content ul) {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+
+  li {
+    list-style: none;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    color: #333;
+    font-size: 13px;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: rgba(255, 55, 29, 0.85);
+      background: rgba(255, 55, 29, 0.05);
+    }
+  }
+
+  .liDate {
+    margin-left: auto;
+    padding: 0;
+    height: 28px;
+    line-height: 28px;
+  }
+}
+
+// 隐藏折叠图标
+:deep(.el-collapse-item__arrow) {
+  display: none;
+}
+
+// 隐藏日期选择器图标，只在点击时显示
+:deep(.el-date-editor .el-input__prefix) {
+  display: none;
+}
+
+:deep(.el-date-editor .el-input__suffix) {
   display: none;
 }
 
