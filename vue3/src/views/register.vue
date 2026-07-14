@@ -255,114 +255,73 @@ function handleValueFromChild(value) {
 <style scoped lang="scss">
 .app-container {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  background: #ffffff;
+  min-height: 100vh;
+  background: #f5f5f5;
 
   .main {
-    background-color: #f8f8f8;
-    padding-top: 40px;
+    padding: 40px 0 60px;
 
     .main-center {
-      width: 1200px;
-      height: 500px;
+      width: 600px;
       background: #ffffff;
-      padding-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 40px 60px;
       margin: 0 auto;
-      position: relative;
-
 
       .el-form {
-        width: 720px;
-        margin: 0 auto;
-        color: #666666;
+        color: #666;
 
         .el-input {
-          height: 38px;
-
+          height: 42px;
         }
 
         .el-select {
           .el-input {
-            height: 38px;
+            height: 42px;
           }
         }
 
         .chx {
-          width: 260px;
-          height: 37px;
-          display: inline-block;
+          font-size: 13px;
+          color: #999;
+          line-height: 1.5;
         }
-
-        .slider {
-          width: 400px; /* 调整容器大小 */
-          .el-input[type='range'] {
-            appearance: none;
-            background-color: #ccc;
-            height: 8px;
-            border-radius: 5px;
-            cursor: pointer;
-            outline: none;
-            padding: 0;
-            margin: 0;
-            position: relative;
-            transition: background-size 0.3s ease;
-          }
-
-          .el-input[type='range']::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            z-index: 1;
-          }
-
-          .el-input[type='range']::after {
-            content: attr(data-label);
-            text-align: center;
-            font-weight: bold;
-            color: white;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: calc((var(--percentage) / 100) * 100%);
-            z-index: 2;
-          }
-        }
-
-
       }
     }
-
   }
 }
 
-:deep .el-input-group--prepend .el-input-group__prepend .el-select .el-input .el-input__wrapper {
-  height: 38px !important;
+:deep(.el-input-group--prepend .el-input-group__prepend .el-select .el-input .el-input__wrapper) {
+  height: 42px !important;
+}
+
+:deep(.el-form-item) {
+  margin-bottom: 28px;
+}
+
+:deep(.el-form-item__label) {
+  font-size: 14px;
+  color: #333;
 }
 
 .btn {
-  background-color: rgba(255, 55, 29, 0.85);
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff4aae), to(rgba(255, 55, 29, 0.85)));
-  background-image: linear-gradient(90deg, #ff4aae, rgba(255, 55, 29, 0.85));
-  border-color: rgba(255, 55, 29, 0.85);
-  border-radius: 3px;
-  font-size: 20px;
-  height: 42px;
-  line-height: 42px;
-  outline: none;
+  background: rgba(255, 55, 29, 0.85);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  height: 44px;
+  line-height: 44px;
   color: #fff;
   width: 100%;
   cursor: pointer;
-  margin-top: 60px;
-  margin-left: 280px;
-}
+  margin-top: 20px;
+  transition: all 0.3s ease;
 
-.el-form-item--default {
-  margin-bottom: 34px;
+  &:hover {
+    background: rgba(255, 55, 29, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 55, 29, 0.3);
+  }
 }
 </style>
