@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <!--详情-->
   <Header></Header>
   <div class="app-container">
@@ -692,56 +692,102 @@ function removeTag(str, tag) {
     }
 
     .box-main-right {
-      width: 258px;
+      width: 280px;
       border: 1px solid #eaeaea;
-      margin-left: 10px;
-      max-height: 514px;
+      margin-left: 16px;
+      border-radius: 8px;
+      overflow: hidden;
       float: right;
+      background: #fff;
 
       .box-like {
-        height: 37px;
-        line-height: 37px;
-        background-color: #f5f5f5;
-        border-bottom: 1px solid #eaeaea;
+        height: 44px;
+        line-height: 44px;
+        background: linear-gradient(135deg, #ff371d 0%, #ff6b4a 100%);
         font-size: 14px;
-        font-family: Microsoft YaHei;
-        color: #000;
-        padding: 0 15px;
+        font-weight: 500;
+        color: #fff;
+        padding: 0 16px;
       }
 
       .search__box {
         margin: 0;
         padding: 0;
+        list-style: none;
 
         .search__item {
           display: flex;
-          background-color: #fff;
-          border: none;
-          padding: 15px 15px 0 15px;
-          margin-bottom: 0px;
-          box-shadow: none;
+          align-items: center;
+          padding: 12px 16px;
+          border-bottom: 1px solid #f5f5f5;
+          transition: background 0.2s;
+          cursor: pointer;
 
-          img {
-            width: 98px;
-            height: 132px;
-            float: left;
+          &:hover {
+            background: #fafafa;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .link {
+            flex-shrink: 0;
+            width: 80px;
+            height: 106px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-right: 12px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
           }
 
           .search_item_info {
+            flex: 1;
+            min-width: 0;
+
             .link__title {
-              font-size: 14px;
+              display: block;
+              font-size: 13px;
+              color: #333;
+              font-weight: 500;
+              line-height: 1.4;
+              margin-bottom: 6px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+
+              &:hover {
+                color: #ff371d;
+              }
             }
 
             .search__item__info__venue {
               font-size: 12px;
+              color: #999;
+              margin-bottom: 4px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
 
             .search__item__info__price {
-              font-size: 12px;
+              font-size: 14px;
+              color: #ff371d;
+              font-weight: 600;
+
+              strong {
+                color: #ff371d;
+              }
             }
           }
         }
-
       }
     }
   }
@@ -798,47 +844,4 @@ function removeTag(str, tag) {
   display: none;
 }
 
-.search__item {
-  background-color: #fff; /* 白色背景 */
-  border: 1px solid #e0e0e0; /* 边框 */
-  padding: 15px; /* 内边距 */
-  margin-bottom: 10px; /* 每个列表项之间的外边距 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-}
-
-.link {
-  color: #007bff; /* 链接颜色 */
-  text-decoration: none; /* 去除下划线 */
-}
-
-.link__title {
-
-  text-decoration: none; /* 去除下划线 */
-}
-
-.search__item img {
-  width: 100px; /* 图片宽度 */
-  height: auto; /* 图片高度自适应 */
-  margin-right: 15px; /* 图片与文字的间距 */
-}
-
-.search_item_info {
-  display: inline-block; /* 文字信息与图片同行显示 */
-  vertical-align: top; /* 顶部对齐 */
-}
-
-.search__item__info__venue,
-.search__item__info__price {
-  font-size: 14px; /* 字体大小 */
-  color: #666; /* 字体颜色 */
-}
-
-.search__item__info__price strong {
-  color: rgba(255, 55, 29, 0.85); /* 价格字体颜色为红色 */
-}
-:deep(em){
- font-weight: bolder;
-  color: rgba(255, 55, 29, 0.85);
-
-}
 </style>
