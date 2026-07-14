@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <!--详情-->
   <Header></Header>
   <div class="app-container">
@@ -11,25 +11,19 @@
               <el-collapse-item name="1">
                 <template #title>
                   <span class="title">城市：</span>
-                  <span>当前选中城市：</span><span class="active">{{ currentCity }}</span>
+                  <span>当前选中：</span><span class="active">{{ currentCity }}</span>
                 </template>
-                <div class="city">
-                  <ul style="margin-left: 70px">
-                    <li v-show="isShow" v-for="(item,index) in cityArr.slice(0,22)" :key="item.id"
-                        @click="cityClick(item,index)"
-                    >
-                      <span v-if="item.name==currentCity" class="active">{{ item.name }}</span>
-                      <span v-else>{{ item.name }}</span>
-                    </li>
-                    <li v-show="!isShow" v-for="(item,index) in cityArr" :key="item.id"
-                        @click="cityClick(item,index)" :class="{active: activeCityIndex == index}">{{ item.name }}
-                    </li>
-
-                  </ul>
-                </div>
-                <div class="btn" v-show="cityArr.length>22">
-                  <span v-show="isShow" @click="isShow=false">更多</span>
-                  <span v-show="!isShow" @click="isShow=true">收起</span>
+                <div class="city-tags">
+                  <span
+                    v-for="(item,index) in cityArr.slice(0,20)"
+                    :key="item.id"
+                    class="city-tag"
+                    :class="{ active: item.name === currentCity }"
+                    @click="cityClick(item,index)"
+                  >{{ item.name }}</span>
+                  <span class="more-tag" v-if="cityArr.length > 20" @click="showAllCities = true">
+                    更多城市 >
+                  </span>
                 </div>
               </el-collapse-item>
               <el-collapse-item name="2">
