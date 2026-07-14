@@ -55,7 +55,7 @@
 
 <script setup>
 import Header from '@/components/header/index'
-import swiperPic1 from '@/assets/section/javaup.png'
+import swiperPic1 from '@/assets/section/swiperPic1.png'
 import concert from '@/assets/section/concert.jpg'
 import small from '@/assets/section/small.jpg'
 import {onMounted, ref} from 'vue'

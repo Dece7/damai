@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="app-header">
     <div class="header">
       <router-link to="/index" class="link">
@@ -126,6 +126,7 @@ const localId = ref('')
 const hotCity = ref([])
 const otherCity = ref([])
 const visible = ref(false)
+const showAllCities = ref(false)
 const queryParams = ref({
   content: '',
   pageNumber: 1,
@@ -149,16 +150,20 @@ const handleClose = (key, keyPath) => {
 }
 
 //退出到首页,设置token为空，并且昵称变为登录
-  //打开AI客服
-  function openAIChat() {
-    const token = getToken()
-    if (token) {
-      window.open(`http://localhost:8000?token=${token}`)
-    } else {
-      ElMessage.warning(`请先登录`)
-    }
+function openAIChat() {
+  const token = getToken()
+  if (token) {
+    window.open(`http://localhost:8000?token=${token}`, "_blank")
+  } else {
+    window.open("http://localhost:8000", "_blank")
   }
+}
 
+
+function selectCity(item) {
+  getCityInfoList(item)
+  showAllCities.value = false
+}
 function loginOut() {
   userStore.logOut().then(() => {
     location.href = '/';
@@ -470,13 +475,6 @@ function getProgramSearchList() {
   .logOut {
     cursor: pointer;
 
-    .aiChat {
-      cursor: pointer;
-      color: #409eff;
-    }
-    .aiChat:hover {
-      color: #66b1ff;
-    }
     .loginOut {
       width: 100px;
       height: 50px;
@@ -618,4 +616,53 @@ function getProgramSearchList() {
 }
 
 
+
+/* 城市选择新样式 */
+.city-panel {
+  padding: 16px;
+}
+
+.city-current {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  .label { color: #999; font-size: 13px; }
+  .value { color: #ff371d; font-weight: 500; }
+}
+
+.city-hot .label {
+  color: #999;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.hot-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.hot-tag {
+  padding: 6px 16px;
+  background: #f5f5f7;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover { background: #fff4f2; color: #ff371d; }
+  &.active { background: #ff371d; color: #fff; }
+}
+
+.more-btn {
+  padding: 6px 16px;
+  background: transparent;
+  border: 1px dashed #ddd;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #999;
+  cursor: pointer;
+  &:hover { border-color: #ff371d; color: #ff371d; }
+}
 </style>
