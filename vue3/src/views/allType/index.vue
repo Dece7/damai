@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <!--详情-->
   <Header></Header>
   <div class="app-container">
@@ -344,7 +344,7 @@ const handleChange = (val) => {
 //获取城市数据
 const getcityList = () => {
   getOtherCity().then(response => {
-    cityArr.value = response.data
+    cityArr.value = response.data ? response.data.slice(0, 25) : []
     cityArr.value.unshift({name: '全部', id: ''})
   })
 }

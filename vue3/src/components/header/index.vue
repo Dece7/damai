@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="app-header">
     <div class="header">
       <router-link to="/index" class="link">
@@ -225,7 +225,7 @@ function getHot() {
 //其他城市
 function getOther() {
   getOtherCity().then(response => {
-    otherCity.value = response.data
+    otherCity.value = response.data ? response.data.slice(0, 15) : []
   })
 }
 
