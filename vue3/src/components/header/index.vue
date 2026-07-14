@@ -248,8 +248,11 @@ function getProgramSearchList() {
   box-shadow: 0 2px 16px 0 rgba(220, 220, 220, .5);
 
   .header {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
     height: 72px;
     display: flex;
     align-items: center;
