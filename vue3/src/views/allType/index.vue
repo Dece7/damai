@@ -69,7 +69,7 @@
                   class="date-picker"
                 />
               </div>
-            </div>
+          </div>
           </div>
           </div>
           <div class="box-sort">
