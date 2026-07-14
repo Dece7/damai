@@ -3,58 +3,46 @@
     <Header></Header>
     <div class="main">
       <div class="main-center">
-        <el-row>
-          <el-form ref="registerRef" :model="registerForm" :rules="registerRules">
-            <el-col :span="18">
-              <el-form-item label="手机号码:" prop="mobile" label-width="230px">
-                <el-input v-model="registerForm.mobile" class="input-with-select" maxlength="11">
-                  <template #prepend>
-                    <el-select v-model="select" placeholder="Select" style="width: 145px">
-                      <el-option label="中国大陆 +86" value="1"/>
-                    </el-select>
-                  </template>
-                </el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="18">
-              <el-form-item label="输入密码:" prop="password" label-width="230px">
-                <el-input
-                    v-model="registerForm.password"
-                    class="input-with-select"
-                    type="password"
-                >
-                </el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="18">
-              <el-form-item label="确认密码:" prop="confirmPassword" label-width="230px">
-                <el-input
-                    v-model="registerForm.confirmPassword"
-                    class="input-with-select"
-                    type="password"
-                >
-                </el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="18">
-              <el-form-item label-width="230px" :style="chkStyle">
-                <el-checkbox v-model="checkBox" @change="boxChange"/>
-                <span class="chx">{{ agreeOpt }}</span>
-              </el-form-item>
-            </el-col>
-            <el-col :span="5">
-              <el-button
-                  size="large"
-                  type="primary"
-                  style="width:100%;"
-                  class="btn"
-                  @click.prevent="handleAgreeLogin"
-              >
-                <span>同意并注册</span>
-              </el-button>
-            </el-col>
-          </el-form>
-        </el-row>
+        <el-form ref="registerRef" :model="registerForm" :rules="registerRules" label-width="100px">
+          <el-form-item label="手机号码" prop="mobile">
+            <el-input v-model="registerForm.mobile" maxlength="11" placeholder="请输入手机号码">
+              <template #prepend>
+                <el-select v-model="select" style="width: 145px">
+                  <el-option label="中国大陆 +86" value="1"/>
+                </el-select>
+              </template>
+            </el-input>
+          </el-form-item>
+          <el-form-item label="输入密码" prop="password">
+            <el-input
+                v-model="registerForm.password"
+                type="password"
+                placeholder="请输入密码"
+                show-password
+            />
+          </el-form-item>
+          <el-form-item label="确认密码" prop="confirmPassword">
+            <el-input
+                v-model="registerForm.confirmPassword"
+                type="password"
+                placeholder="请再次输入密码"
+                show-password
+            />
+          </el-form-item>
+          <el-form-item :style="chkStyle">
+            <el-checkbox v-model="checkBox" @change="boxChange"/>
+            <span class="chx">{{ agreeOpt }}</span>
+          </el-form-item>
+          <el-form-item>
+            <el-button
+                type="primary"
+                class="btn"
+                @click.prevent="handleAgreeLogin"
+            >
+              同意并注册
+            </el-button>
+          </el-form-item>
+        </el-form>
       </div>
     </div>
     <Verify
@@ -297,7 +285,15 @@ function handleValueFromChild(value) {
 }
 
 :deep(.el-form-item) {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+}
+
+:deep(.el-form-item:last-child) {
+  margin-bottom: 0;
+}
+
+:deep(.el-form-item__content) {
+  flex-wrap: nowrap;
 }
 
 :deep(.el-form-item__label) {
@@ -311,11 +307,9 @@ function handleValueFromChild(value) {
   border-radius: 8px;
   font-size: 16px;
   height: 44px;
-  line-height: 44px;
   color: #fff;
   width: 100%;
   cursor: pointer;
-  margin-top: 20px;
   transition: all 0.3s ease;
 
   &:hover {
