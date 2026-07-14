@@ -6,85 +6,71 @@
     <div class="box-main">
       <div class="box-main-left">
         <div class="box-tLeft">
-          <div class="box-type">
-            <el-collapse v-model="activeNames" @change="handleChange">
-              <el-collapse-item name="1">
-                <template #title>
-                  <span class="title">城市：</span>
-                  <span>当前选中：</span><span class="active">{{ currentCity }}</span>
-                </template>
-                <div class="city-tags">
-                  <span
-                    v-for="(item,index) in cityArr.slice(0,20)"
-                    :key="item.id"
-                    class="city-tag"
-                    :class="{ active: item.name === currentCity }"
-                    @click="cityClick(item,index)"
-                  >{{ item.name }}</span>
-                  <span class="more-tag" v-if="cityArr.length > 20" @click="showAllCities = true">
-                    更多城市 >
-                  </span>
-                </div>
-              </el-collapse-item>
-              <el-collapse-item name="2">
-                <template #title>
-                  <span class="title">分类:</span>
-                </template>
-                <div>
-                  <ul>
-                    <li v-for="(item,ind) in categoryArr" :key="item.id"
-                        @click="categoryClick(item,ind)"
-                    >
-                      <span v-if="$route.query.name==item.name" class="active">{{ item.name }}</span>
-                      <span v-if="$route.query.name!=item.name&&item.name=='全部'" :class="{active:isActive}">全部</span>
-                      <span v-if="$route.query.name!=item.name&&item.name!='全部'" :class="{active: activeIndex == ind}">{{
-                          item.name
-                        }}</span>
-                    </li>
-                  </ul>
-                </div>
-              </el-collapse-item>
-              <el-collapse-item name="3" v-if="isShowChildren">
-                <template #title>
-                  <span class="title">子类:</span>
-                </template>
-                <div>
-                  <ul>
-                    <li v-for="(item,index) in childrenArr" :key="item.id"
-                        @click="childrenClick(item,index)" :class="{active: activeChildrenIndex == index}">
-                      {{ item.name }}
-                    </li>
-
-                  </ul>
-                </div>
-              </el-collapse-item>
-
-              <el-collapse-item name="4">
-                <template #title>
-                  <span class="title">时间:</span>
-                </template>
-                <div>
-                  <ul>
-                    <li v-for="(item,index) in timeArr" :key="item.id"
-                        @click="timeClick(item,index)" :class="{active: activeTimeIndex == index}">
-                      <span>{{ item.name }}</span>
-                    </li>
-                    <li class="liDate">
-                      <el-date-picker
-                          v-if="isShowDate"
-                          v-model="value1"
-                          type="daterange"
-                          start-placeholder="开始时间"
-                          end-placeholder="结束时间"
-                          @change="handleChangeDate"
-                      />
-                    </li>
-                  </ul>
-                </div>
-
-              </el-collapse-item>
-
-            </el-collapse>
+          <div class="filter-panel">
+            <!-- 城市筛选 -->
+            <div class="filter-row">
+              <div class="filter-label">城市</div>
+              <div class="filter-content">
+                <span
+                  v-for="(item,index) in cityArr.slice(0,15)"
+                  :key="item.id"
+                  class="filter-tag"
+                  :class="{ active: item.name === currentCity }"
+                  @click="cityClick(item,index)"
+                >{{ item.name }}</span>
+                <span class="filter-more" v-if="cityArr.length > 15">更多 ></span>
+              </div>
+            </div>
+            <!-- 分类筛选 -->
+            <div class="filter-row">
+              <div class="filter-label">分类</div>
+              <div class="filter-content">
+                <span
+                  v-for="(item,ind) in categoryArr"
+                  :key="item.id"
+                  class="filter-tag"
+                  :class="{ active: $route.query.name === item.name }"
+                  @click="categoryClick(item,ind)"
+                >{{ item.name }}</span>
+              </div>
+            </div>
+            <!-- 子类筛选 -->
+            <div class="filter-row" v-if="isShowChildren">
+              <div class="filter-label">子类</div>
+              <div class="filter-content">
+                <span
+                  v-for="(item,index) in childrenArr"
+                  :key="item.id"
+                  class="filter-tag"
+                  :class="{ active: activeChildrenIndex == index }"
+                  @click="childrenClick(item,index)"
+                >{{ item.name }}</span>
+              </div>
+            </div>
+            <!-- 时间筛选 -->
+            <div class="filter-row">
+              <div class="filter-label">时间</div>
+              <div class="filter-content">
+                <span
+                  v-for="(item,index) in timeArr"
+                  :key="item.id"
+                  class="filter-tag"
+                  :class="{ active: activeTimeIndex == index }"
+                  @click="timeClick(item,index)"
+                >{{ item.name }}</span>
+                <el-date-picker
+                  v-if="isShowDate"
+                  v-model="value1"
+                  type="daterange"
+                  size="small"
+                  start-placeholder="开始日期"
+                  end-placeholder="结束日期"
+                  @change="handleChangeDate"
+                  class="date-picker"
+                />
+              </div>
+            </div>
+          </div>
           </div>
           <div class="box-sort">
             <el-tabs type="border-card" class="box-tabs" @tab-click="handleClickTab">
@@ -879,4 +865,62 @@ div.city {
   color: rgba(255, 55, 29, 0.85);
 
 }
+
+/* 筛选面板样式 */
+.filter-panel {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.filter-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #f5f5f5;
+  &:last-child { border-bottom: none; }
+}
+
+.filter-label {
+  width: 60px;
+  font-size: 14px;
+  color: #999;
+  flex-shrink: 0;
+  padding-top: 6px;
+}
+
+.filter-content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.filter-tag {
+  padding: 6px 16px;
+  background: #f5f5f7;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover { background: #fff4f2; color: #ff371d; }
+  &.active { background: #ff371d; color: #fff; }
+}
+
+.filter-more {
+  padding: 6px 16px;
+  background: transparent;
+  border: 1px dashed #ddd;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #999;
+  cursor: pointer;
+  &:hover { border-color: #ff371d; color: #ff371d; }
+}
+
+.date-picker { margin-left: 8px; }
 </style>
