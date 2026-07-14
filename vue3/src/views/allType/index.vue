@@ -298,6 +298,7 @@ const childrenArr = ref([])
 const currentCity = ref('')
 const parentProgramCategoryId = ref('')
 const isShow = ref(true)
+const showAllCities = ref(false)
 const activeIndex = ref('')
 const isShowClass = ref('')
 const activeCityIndex = ref('')
@@ -553,7 +554,50 @@ function removeTag(str, tag) {
           border: 1px solid #e9e9e9;
           min-height: 300px;
 
-          div.city {
+          /* 城市标签样式 */
+.city-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.city-tag {
+  padding: 6px 16px;
+  background: #f5f5f7;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  &:hover {
+    background: #fff4f2;
+    color: #ff371d;
+  }
+  
+  &.active {
+    background: #ff371d;
+    color: #fff;
+  }
+}
+
+.more-tag {
+  padding: 6px 16px;
+  background: transparent;
+  border: 1px dashed #ddd;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #999;
+  cursor: pointer;
+  
+  &:hover {
+    border-color: #ff371d;
+    color: #ff371d;
+  }
+}
+
+div.city {
             display: inline-block;
             width: calc(100% - 40px);
           }
