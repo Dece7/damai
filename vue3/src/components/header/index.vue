@@ -86,10 +86,6 @@
           </el-popover>
 
         </div>
-        <div class="box-right">
-          <img :src="document" alt="">
-          <span><a href="https://javaup.chat" target="_blank">文档</a></span>
-        </div>
       </div>
     </div>
   </div>
@@ -99,7 +95,6 @@
 
 import logo from '@/assets/login/logo.png'
 import photo from '@/assets/login/photo.png'
-import document from '@/assets/login/document.jpeg'
 import {ref, reactive, onMounted, nextTick} from 'vue'
 import {getToken, getUserIdKey, removeToken, removeUserIdKey, removeName} from "../../utils/auth";
 import useUserStore from '@/store/modules/user'
@@ -408,29 +403,6 @@ function getProgramSearchList() {
           overflow: hidden; /* 超出容器部分隐藏 */
           text-overflow: ellipsis;
         }
-
-      }
-
-      .box-right {
-        height: 100%;
-        display: inline-block;
-        line-height: 72px;
-        cursor: pointer;
-        position: relative;
-        margin-left: 20px;
-
-        &:hover {
-          color: rgba(255, 55, 29, 0.85);
-        }
-
-        img {
-          width: 26px;
-          z-index: 20000;
-          display: inline-block;
-          margin-right: 4px;
-          vertical-align: middle;
-        }
-
 
       }
     }
